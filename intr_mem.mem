@@ -1,0 +1,58 @@
+// Initialize registers for all tests
+00000293 // addi x5, x0, 0        ; x5 = 0
+00100313 // addi x6, x0, 1        ; x6 = 1
+
+// ------ BEQ: Should NOT be taken (x5 != x6)
+00628463 // beq x5, x6, +8        ; PC+8, not taken
+00200393 // addi x7, x0, 2        ; x7 = 2 (not taken path, should execute)
+00300413 // addi x8, x0, 3        ; x8 = 3 (not taken path, should execute)
+
+// ------ BEQ: Should BE taken (x5 == x5)
+00528463 // beq x5, x5, +8        ; PC+8, taken
+00400393 // addi x7, x0, 4        ; x7 = 4 (should be squashed)
+00500413 // addi x8, x0, 5        ; x8 = 5 (branch target,should execute)
+00600393 // addi x7, x0, 6        ; x7 = 6 (branch target, should execute)
+00700413 // addi x8, x0, 7        ; x8 = 7 (branch target, should execute)
+
+// ------ BNE: Should BE taken (x5 != x6)
+00629463 // bne x5, x6, +8        ; PC+8, taken
+00800393 // addi x7, x0, 8        ; x7 = 8 (should be squashed)
+00900413 // addi x8, x0, 9        ; x8 = 9 (branch target,should execute)
+00a00393 // addi x7, x0, 10       ; x7 = 10 (branch target, should execute)
+00b00413 // addi x8, x0, 11       ; x8 = 11 (branch target, should execute)
+
+// ------ BNE: Should NOT be taken (x7 == x7)
+00739463 // bne x7, x7, +8        ; PC+8, not taken
+00c00393 // addi x7, x0, 12       ; x7 = 12 (not taken path, should execute)
+00d00413 // addi x8, x0, 13       ; x8 = 13 (not taken path, should execute)
+
+// ------ BLT: Should BE taken (x5 < x6, i.e., 0 < 1)
+0062C463 // blt x5, x6, +8        ; PC+8, taken
+00e00393 // addi x7, x0, 14       ; x7 = 14 (should be squashed)
+00f00413 // addi x8, x0, 15       ; x8 = 15 (branch target,should execute)
+01000393 // addi x7, x0, 16       ; x7 = 16 (branch target,should execute)
+01100413 // addi x8, x0, 17       ; x8 = 17 (branch target, should execute)
+
+// ------ BLT: Should NOT be taken (x6 < x5 is false, i.e., 1 < 0 is false)
+0053c463 // blt x6, x5, +8        ; PC+8, not taken (CORRECTED: was 0053c463)
+01200393 // addi x7, x0, 18       ; x7 = 18 (not taken path, should execute)
+01300413 // addi x8, x0, 19       ; x8 = 19 (not taken path, should execute)
+
+// ------ BGE: Should BE taken (x6 >= x5, i.e., 1 >= 0)
+0052d463 // bge x6, x5, +8        ; PC+8, taken
+01400393 // addi x7, x0, 20       ; x7 = 20 (should be squashed)
+01500413 // addi x8, x0, 21       ; x8 = 21 (branch target,should execute)
+01600393 // addi x7, x0, 22       ; x7 = 22 (branch target, should execute)
+01700413 // addi x8, x0, 23       ; x8 = 23 (branch target, should execute)
+
+// ------ BGE: Should NOT be taken (x5 >= x6 is false, i.e., 0 >= 1 is false)
+0062d463 // bge x5, x6, +8        ; PC+8, not taken 
+01800393 // addi x7, x0, 24       ; x7 = 24 (not taken path, should execute)
+01900413 // addi x8, x0, 25       ; x8 = 25 (not taken path, should execute)
+
+// ------ BLTU: Should BE taken (x5 < x6 unsigned, i.e., 0 < 1)
+0062e463 // bltu x5, x6, +8       ; PC+8, taken
+01a00393 // addi x7, x0, 26       ; x7 = 26 (should be squashed)
+01b00413 // addi x8, x0, 27       ; x8 = 27 (branch target,should execute)
+01c00393 // addi x7, x0, 28       ; x7 = 28 ( should execute)
+01d00413 // addi x8, x0, 29       ; x8 = 29 ( should execute)
