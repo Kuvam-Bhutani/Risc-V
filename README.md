@@ -14,6 +14,7 @@ Supported ISA: RISC-V
 * Writeback Unit
 * Control Unit
 * Hazard Detection Unit
+
 **Verification**: Simulation waveforms and testbenches
 
 ### Features
