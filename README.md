@@ -50,7 +50,9 @@ Supported ISA: RISC-V
 ### Hazard Unit
 ![image](https://github.com/user-attachments/assets/0ca4c1e8-7610-4498-a1d0-566c96a09d6a)
 
+## Simulations
 
+This video shows the first 5 instructions. First the value of 5th and 6th registers are set to 0 and 1 respectively and as the branch is not taken the 7th and 8th instructions are set to the values 2 and 3 respectively.
 
 https://github.com/user-attachments/assets/96e102cc-caed-4c6b-96c4-e134c8186d51
 
