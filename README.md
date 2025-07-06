@@ -52,7 +52,15 @@ Supported ISA: RISC-V
 
 ## Simulations
 
-This video shows the first 5 instructions. First the value of 5th and 6th registers are set to 0 and 1 respectively and as the branch is not taken the 7th and 8th instructions are set to the values 2 and 3 respectively.
+This video shows the **first 5 instructions**. First the value of 5th and 6th registers are set to 0 and 1 respectively and as the branch is not taken the 7th and 8th instructions are set to the values 2 and 3 respectively.
 
 https://github.com/user-attachments/assets/96e102cc-caed-4c6b-96c4-e134c8186d51
+
+This video shows the **next 5 instructions**. As the branch is taken, the instruction setting 7th register to value 4 doesnt get executed and then the values of 8th register is set to 5 then 7th register to 6 and finally 8th register to 7.
+
+https://github.com/user-attachments/assets/59e73880-4c64-4271-aab0-e580e15e7776
+
+This video shows the **next 5 instructions**. As the branch is taken, the instruction setting 7th register to value 8 doesnt get executed and then the values of 8th register is set to 9 then 7th register to 10(a) and finally 8th register to 11(b).
+
+https://github.com/user-attachments/assets/d7c9e883-a1d8-4139-981b-71da9dc0f4f6
 
