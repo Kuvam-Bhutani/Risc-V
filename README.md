@@ -87,3 +87,7 @@ https://github.com/user-attachments/assets/2df546e6-9248-4920-90d0-c921f35a3d0b
 This video shows the **next 5 instructions**. As the branch is taken, the instruction setting 7th register to value 26 doesnt get executed and then the values of 8th register is set to 27(1b) then 7th register to 28(1c) and finally 8th register to 29(1d).
 
 https://github.com/user-attachments/assets/26b0ae55-9dba-43e3-ac57-21e3b312dbd3
+
+## Future Scope
+* FPGA implementation.
+* Converting this to a vector processor.
