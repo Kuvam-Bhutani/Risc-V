@@ -49,3 +49,8 @@ Supported ISA: RISC-V
 
 ### Hazard Unit
 ![image](https://github.com/user-attachments/assets/0ca4c1e8-7610-4498-a1d0-566c96a09d6a)
+
+
+
+https://github.com/user-attachments/assets/96e102cc-caed-4c6b-96c4-e134c8186d51
+
