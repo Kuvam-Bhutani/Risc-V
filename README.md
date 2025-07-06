@@ -64,3 +64,7 @@ This video shows the **next 5 instructions**. As the branch is taken, the instru
 
 https://github.com/user-attachments/assets/d7c9e883-a1d8-4139-981b-71da9dc0f4f6
 
+This video shows the **next 3 instructions**. As the branch is not taken, both the intructions are executed and 7th register gets the value 12(c) and 8th register stores the value 13(d) respectively.
+
+https://github.com/user-attachments/assets/c9b256d0-c1bc-4f4c-9845-8bdf3e9de6cb
+
