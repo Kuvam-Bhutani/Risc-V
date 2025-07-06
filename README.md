@@ -77,3 +77,6 @@ This video shows the **next 3 instructions**. As the branch is not taken, both t
 https://github.com/user-attachments/assets/047dee04-4fa3-4367-8776-7ee93daab0d0
 
 This video shows the **next 5 instructions**. As the branch is taken, the instruction setting 7th register to value 20 doesnt get executed and then the values of 8th register is set to 21(15) then 7th register to 22(16) and finally 8th register to 23(17).
+
+https://github.com/user-attachments/assets/d23b21db-3acc-4890-9c40-872faa4d5761
+
